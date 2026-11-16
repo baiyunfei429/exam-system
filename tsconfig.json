@@ -11,7 +11,10 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2023",
-    "types": ["node", "jest"],
+    "types": [
+      "node",
+      "jest"
+    ],
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": ".",
@@ -19,5 +22,26 @@
     "skipLibCheck": true,
     "strict": true,
     "strictPropertyInitialization": false
-  }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/exam-system/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/user/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/exam/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/answer/tsconfig.app.json"
+    },
+    {
+      "path": "./apps/analyse/tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }
