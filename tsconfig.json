@@ -21,7 +21,15 @@
     "incremental": true,
     "skipLibCheck": true,
     "strict": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@app/redis": [
+        "./libs/redis/src"
+      ],
+      "@app/redis/*": [
+        "./libs/redis/src/*"
+      ]
+    }
   },
   "files": [],
   "references": [
