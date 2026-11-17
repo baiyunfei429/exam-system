@@ -23,6 +23,12 @@
     "strict": true,
     "strictPropertyInitialization": false,
     "paths": {
+      "@app/email": [
+        "./libs/email/src"
+      ],
+      "@app/email/*": [
+        "./libs/email/src/*"
+      ],
       "@app/prisma": [
         "./libs/prisma/src"
       ],
