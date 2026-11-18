@@ -14,6 +14,8 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
     transform: true,
   }),)
+  app.enableCors();
+
   // 2. 启动所有已注册的微服务
   await app.startAllMicroservices();
   await app.listen(3002);
