@@ -83,6 +83,14 @@ export class ExamService {
         isPublish: false
       }
     })
-}
+  }
+
+  async find(id: number) {
+    return this.prismaService.exam.findUnique({
+      where: {
+        id
+      }
+    })
+  }
 }
 

@@ -49,6 +49,12 @@ export class ExamController {
     return this.examService.unpublish(userId, +id);
   }
 
+  @Get('find/:id')
+  @RequireLogin()
+  async find(@Param('id') id: string) {
+    return this.examService.find(+id);
+  }
+
   @Get()
   async getHello() {
     const keys = await this.redisService.keys('*');
