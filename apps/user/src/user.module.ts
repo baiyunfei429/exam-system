@@ -6,13 +6,15 @@ import { PrismaModule } from '@app/prisma';
 import { EmailModule } from '@app/email';
 import { AuthGuard, CommonModule } from '@app/common';
 import { APP_GUARD } from '@nestjs/core';
+import { EtcdModule } from '@app/etcd';
 
 @Module({
   imports: [
     RedisModule,
     PrismaModule,
     EmailModule,
-    CommonModule
+    CommonModule,
+    EtcdModule
   ],
   controllers: [UserController],
   providers: [UserService,

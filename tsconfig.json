@@ -35,6 +35,12 @@
       "@app/email/*": [
         "./libs/email/src/*"
       ],
+      "@app/etcd": [
+        "./libs/etcd/src"
+      ],
+      "@app/etcd/*": [
+        "./libs/etcd/src/*"
+      ],
       "@app/excel": [
         "./libs/excel/src"
       ],

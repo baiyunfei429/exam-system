@@ -6,6 +6,7 @@ import { EmailService } from '@app/email';
 import { LoginUserDto } from './dto/login-user.dto';
 import { JwtService } from '@nestjs/jwt';
 import { UpdateUserPasswordDto } from './dto/update-user-password.dto';
+import { EtcdService } from '@app/etcd';
 
 @Controller('user')
 export class UserController {
@@ -19,6 +20,9 @@ export class UserController {
 
   @Inject(JwtService)
   private jwtService: JwtService;
+
+  @Inject(EtcdService)
+  private etcdService: EtcdService;
 
   @Post('register')
   async register(@Body() registerUser: RegisterUserDto) {
@@ -76,6 +80,16 @@ export class UserController {
     return '发送成功';
   }
 
+  @Get('save_etcd')
+  async saveConfig(@Query('value') value: string) {
+    await this.etcdService.saveConfig('aaa', value);
+    return 'done';
+  }
+
+  @Get('get_etcd')
+  async getConfig() {
+    return await this.etcdService.getConfig('aaa');
+  }
 
   @Get()
   async getHello(): Promise<string> {

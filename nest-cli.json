@@ -46,6 +46,15 @@
         "tsConfigPath": "libs/email/tsconfig.lib.json"
       }
     },
+    "etcd": {
+      "type": "library",
+      "root": "libs/etcd",
+      "entryFile": "index",
+      "sourceRoot": "libs/etcd/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/etcd/tsconfig.lib.json"
+      }
+    },
     "exam": {
       "type": "application",
       "root": "apps/exam",
